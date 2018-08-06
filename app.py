@@ -39,11 +39,11 @@ class Board(object):
 
 
 DB = Board([
-    # TaskList(name="Todo",
-    #          tasks=[
-    #              Task("Write example React app"),
-    #              Task("Write documentation")
-    #          ])
+    TaskList(name="Todo",
+             tasks=[
+                 Task("Write example React app"),
+                 Task("Write documentation")
+             ])
 ])
 
 

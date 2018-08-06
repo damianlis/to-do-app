@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Cards from "./Cards.jsx";
-import CardCreator from './CardCreator.jsx';
+import CardCreator from "./CardCreator.jsx";
 
 export default class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       cards: []
-    }
+    };
   }
   componentDidMount() {
     fetch("http://127.0.0.1:5000/api/board")
@@ -15,15 +15,15 @@ export default class App extends Component {
       .then(data => {
         this.setState({
           cards: data.lists
-        })
+        });
       });
   }
   render() {
     return (
       <div>
         <h1>Board of Tasks</h1>
-        {/* <Cards cards={this.state.cards} /> */}
-        <CardCreator />
+        <Cards cards={this.state.cards} />
+        {/* <CardCreator /> */}
       </div>
     );
   }
