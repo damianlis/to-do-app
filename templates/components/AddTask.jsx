@@ -14,6 +14,9 @@ export default class AddTask extends Component {
   };
   handleAddTask = text => {
       this.props.addTask(this.state.text);
+      this.setState({
+        text: ""
+      })
   }
   render() {
     return (

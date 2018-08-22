@@ -1,12 +1,17 @@
+# kodowanie i dekodowanie formatu JSON
 import json
+#
 
-from flask import Flask, render_template, request, redirect, url_for
+# Flask app
+from flask import Flask, render_template, request
 
 app = Flask(__name__, static_folder="./templates/dist")
+#
 
-
+# stworzenie obiektu
 class Task(object):
 
+    # konstruktor
     def __init__(self, text):
         self.text = text
 
